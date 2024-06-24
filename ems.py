@@ -1,4 +1,4 @@
-emp=[[1,'achu',21,500,0,'achu2003@gmail.com',8281434986],[2,'arun',21,500,0,'achu2003@gmail.com',8281434986]]
+emp=[[1,'achu',21,500,0,'achu2003@gmail.com',8281434986],[2,'arun',21,500,0,'arun2003@gmail.com',8281434986]]
 while True:
     print("1.add,\n2.view\n3.update\n4.delete\n5.exit")
     choice=int(input('enter your choice'))
@@ -36,17 +36,29 @@ while True:
                 i[4]=emp_exp
         if f==0:
             print('ivalid id')
-    elif choice==4:
-        id=int(input('enter your id'))
+    elif choice == 4:
+        d=int(input('enter id to be deleted'))
         f=0
-        for i in range(len(emp)):
-            if emp[i][0] == id:
-                f=1  
-                del emp[i]
+        for i in emp:
+            if d==i[0]:
+                f=1
+                emp.remove(i)
+                break
         if f==0:
-            print('ivalid id')
+            print('id not available')
+        else:
+            print('updated employee list:',emp)
+    # elif choice==4:
+    #     id=int(input('enter your id'))
+    #     f=0
+    #     for i in range(len(emp)-1):
+    #         if emp[i][0] == id:
+    #             f=1  
+    #             emp.pop(i)
+    #     if f==0:
+    #         print('ivalid id')
     elif choice==5:
-        print('exited ')
+        print('exited')
         break
         
             

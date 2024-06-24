@@ -1,6 +1,6 @@
-emp=[[1,'achu',21,500,0,'achu2003@gmail.com',8281434986]]
+emp=[[1,'achu',21,500,0,'achu2003@gmail.com',8281434986],[2,'arun',21,500,0,'achu2003@gmail.com',8281434986]]
 while True:
-    print("1.add,\n2.view\n3.update\n4.delete")
+    print("1.add,\n2.view\n3.update\n4.delete\n5.exit")
     choice=int(input('enter your choice'))
     if choice==1:
         emp_id=int(input('enter your id'))
@@ -36,6 +36,21 @@ while True:
                 i[4]=emp_exp
         if f==0:
             print('ivalid id')
+    elif choice==4:
+        id=int(input('enter your id'))
+        f=0
+        for i in range(len(emp)):
+            if emp[i][0] == id:
+                f=1  
+                del emp[i]
+        if f==0:
+            print('ivalid id')
+    elif choice==5:
+        print('exited ')
+        break
+        
+            
+
             
 
 

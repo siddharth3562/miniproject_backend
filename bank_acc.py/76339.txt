@@ -1,0 +1,5 @@
+name: sidhu
+phone: 9876567890
+password: 5555
+balance: 500
+account_number: 76339
